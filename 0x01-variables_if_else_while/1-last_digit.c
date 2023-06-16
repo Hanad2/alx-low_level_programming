@@ -7,15 +7,16 @@
  */
 int main(void)
 {
-	char letter;
+    int num = 980;
+    int lastDigit = num % 10;
 
-	/* Print lowercase alphabet using putchar */
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);
+    printf("Last digit of %d is %d and is ", num, lastDigit);
 
-	/* Print a new line using putchar */
-	putchar('\n');
+    if (lastDigit == 0)
+        printf("0\n");
+    else
+        printf("less than 6 and not 0\n");
 
-	return (0);
+    return 0;
 }
 
