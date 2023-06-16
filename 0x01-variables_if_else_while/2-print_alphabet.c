@@ -16,6 +16,6 @@ int main(void)
                 puthcar(alp[i]);
         }
         putcher('\n')
-        return (0);
+        return 0;
 }
 
