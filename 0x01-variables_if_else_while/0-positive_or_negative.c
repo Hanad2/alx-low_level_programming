@@ -13,9 +13,9 @@ int main(void)
 
     srand(time(0)); /* Initialize random seed */
 
-    n = -(rand() % 99 + 1); /* Generate random negative number between -1 and -99 */
+    n = rand() % 199 - 99; /* Generate random number between -99 and 99 */
 
-    printf("%d is ", n);
+    printf("The number %d is ", n);
 
     if (n > 0)
         printf("positive\n");
