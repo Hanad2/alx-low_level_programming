@@ -13,7 +13,7 @@ int main(void)
 
     srand(time(0)); /* Initialize random seed */
 
-    n = 0; /* Assign 0 to n */
+    n = -(rand() % 99 + 1); /* Generate random negative number between -1 and -99 */
 
     printf("%d is ", n);
 
