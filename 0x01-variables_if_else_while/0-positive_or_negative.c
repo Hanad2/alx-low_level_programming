@@ -9,21 +9,21 @@
  */
 int main(void)
 {
-	int n;
+    int n;
 
-	srand(time(0)); /* Initialize random seed */
+    srand(time(0)); /* Initialize random seed */
 
-	n = rand() % 201 - 100; /* Generate random number between -100 and 100 */
+    n = rand() % 201 - 100; /* Generate random number between -100 and 100 */
 
-	printf("%d is ", n);
+    printf("%d is ", n);
 
-	if (n > 0)
-		printf("positive\n");
-	else if (n == 0)
-		printf("zero\n");
-	else
-		printf("negative\n");
+    if (n > 0)
+        printf("positive\n");
+    else if (n == 0)
+        printf("zero\n");
+    else
+        printf("negative\n");
 
-	return (0);
+    return (0);
 }
 
