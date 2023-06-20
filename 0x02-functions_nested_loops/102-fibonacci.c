@@ -1,34 +1,24 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * print_fibonacci_numbers - Prints the first n Fibonacci numbers.
- * @n: The number of Fibonacci numbers to print.
- */
-void print_fibonacci_numbers(int n)
-{
-	int first = 1;
-	int second = 2;
-	int i;
+int main(void) {
+    unsigned long fib1 = 0, fib2 = 1, sum;
+    int count;
 
-	/* Print the first two Fibonacci numbers */
-	_putchar(first + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(second + '0');
+    for (count = 0; count < 50; count++) {
+        sum = fib1 + fib2;
+        printf("%lu", sum);
 
-	/* Print the remaining Fibonacci numbers */
-	for (i = 3; i <= n; i++)
-	{
-		int next = first + second;
-		_putchar(',');
-		_putchar(' ');
-		_putchar(next + '0');
+        fib1 = fib2;
+        fib2 = sum;
 
-		/* Update values for next iteration */
-		first = second;
-		second = next;
-	}
+        if (count == 48) { // Check if it's the second-to-last number
+            printf(", ");
+        } else if (count < 49) { // Check if it's not the last number
+            printf(", ");
+        }
+    }
 
-	_putchar('\n');
+    printf("\n");
+    return 0;
 }
 
