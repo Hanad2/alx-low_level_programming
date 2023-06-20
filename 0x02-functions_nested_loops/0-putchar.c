@@ -1,9 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
+/**
+ * main - Entry point of the program
+ *
+ * Return: 0 on successful execution
+ */
+int main(void)
 {
-    printf("_putchar\n");
-    return 0;
+	printf("_putchar\n");
+	return (0);
 }
 
