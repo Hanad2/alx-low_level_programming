@@ -24,6 +24,6 @@ int main(void)
 
 	printf("%lu\n", even_sum);
 
-	return 0;
+	return (0);
 }
 
