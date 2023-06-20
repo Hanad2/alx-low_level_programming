@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
@@ -24,6 +29,6 @@ int main(void)
 	}
 
 	printf("\n");
-	return 0;
+	return (0);
 }
 
