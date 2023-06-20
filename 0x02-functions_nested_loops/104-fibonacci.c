@@ -21,8 +21,8 @@ int main(void)
 		fib2 = fib_next;
 	}
 
-	printf("\n");
+	printf(", ...\n"); /* Print ellipsis to indicate the sequence continues */
 
-	return (0);
+	return 0;
 }
 
