@@ -8,7 +8,7 @@
 int main(void)
 {
     int i;
-    unsigned long fib1 = 1, fib2 = 1, fib_sum;
+    unsigned long fib1 = 0, fib2 = 1, fib_sum;
 
     printf("%lu, %lu", fib1, fib2);
 
@@ -21,6 +21,6 @@ int main(void)
     }
 
     printf("\n");
-    return 0;
+    return (0);
 }
 
