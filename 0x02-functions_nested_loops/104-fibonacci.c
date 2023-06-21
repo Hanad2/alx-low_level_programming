@@ -1,37 +1,46 @@
 #include <stdio.h>
 
-/**
- * print_fibonacci - Prints the first 98 Fibonacci numbers.
- */
 void print_fibonacci(void);
+void add(unsigned int *num1, unsigned int *num2, unsigned int *result);
 
-/**
- * main - Entry point of the program.
- *
- * Return: 0 on success.
- */
 int main(void)
 {
     print_fibonacci();
+
     return 0;
 }
 
 void print_fibonacci(void)
 {
-    unsigned long long int a = 1, b = 2, temp;
-    int count;
+    unsigned int a[100] = {1, 2};
+    unsigned int *prev = &a[0];
+    unsigned int *curr = &a[1];
+    unsigned int result[100];
+    int i;
 
-    printf("%llu, %llu", a, b);
+    printf("%u, %u", *prev, *curr);
 
-    for (count = 3; count <= 98; count++)
+    for (i = 2; i < 98; i++)
     {
-        temp = a + b;
-        printf(", %llu", temp);
+        add(prev, curr, result);
+        printf(", %u", *result);
 
-        a = b;
-        b = temp;
+        prev = curr;
+        curr = result;
     }
 
     printf("\n");
+}
+
+void add(unsigned int *num1, unsigned int *num2, unsigned int *result)
+{
+    int i, carry = 0;
+
+    for (i = 0; i < 100; i++)
+    {
+        int sum = num1[i] + num2[i] + carry;
+        result[i] = sum % 10;
+        carry = sum / 10;
+    }
 }
 
