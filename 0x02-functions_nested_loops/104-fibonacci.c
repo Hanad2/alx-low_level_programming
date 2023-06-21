@@ -7,20 +7,21 @@
  */
 int main(void)
 {
-    int i;
-    unsigned long fib1 = 0, fib2 = 1, fib_sum;
+	int i;
+	unsigned long fib[100];
 
-    printf("%lu, %lu", fib1, fib2);
+	fib[0] = 0;
+	fib[1] = 1;
 
-    for (i = 2; i < 100; i++)
-    {
-        fib_sum = fib1 + fib2;
-        printf(", %lu", fib_sum);
-        fib1 = fib2;
-        fib2 = fib_sum;
-    }
+	printf("%lu, %lu", fib[0], fib[1]);
 
-    printf("\n");
-    return (0);
+	for (i = 2; i < 100; i++)
+	{
+		fib[i] = fib[i - 1] + fib[i - 2];
+		printf(", %lu", fib[i]);
+	}
+
+	printf("\n");
+	return (0);
 }
 
